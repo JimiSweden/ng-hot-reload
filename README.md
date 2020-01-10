@@ -2,6 +2,48 @@
 note: this updates all the subcomponents (directives) and all state is lost.
 Experimenting with hot reload and angular directives.
 
+## Reason for changes and need for the template not to be cached 
+reason was that the legacy app I am "working on" loads controllers and templates directly inside the stateProvider, like below,
+and when doing html and css changes in the template, 'editView.html', the hot reload does not trigger an update.
+
+```js
+function config($stateProvider) {
+  $stateProvider
+      .state('edit', {    
+    url: '/edit',
+    controller: 'EditCtrl',
+    controllerAs: 'vm',
+    templateUrl: 'editView.html',
+  });
+}
+```
+
+
+## Changes to work around the above are: 
+> Possible issue with this work around is that the templates are not cached and impakcts performance, but that I don't know about yet.
+> There is probably a better solution for this, 
+> perhaps modifying the ng-hot-reload and force updates in the templateCache when html files are updated
+
+
+> Move content from 'home.view.html' to a new directive called 'main', 
+> 'main.html' is the template and 'main.directive.js' is imported in index.js (with all imports) 
+> and hooked up in 'home.view.html'
+
+```jsx
+// home.view.html
+<main></main>
+
+// main.html : all content from home.view.html
+//...
+<hello></hello>
+<counter></counter>
+//...
+
+
+```
+
+
+
 From my relatively short recap on angularjs (havent used it since 2014/2015) I believe/assume this to be true..
 > a template loaded in '$stateProvider' (from ui-router, https://ui-router.github.io/ng1/docs/latest/) will be cached by the $templateCache. 
 > this will cause the hot reolad to not see the template, 'home.view.html', as updated, although it is.
