@@ -1,0 +1,38 @@
+<h1><emoji></emoji> sweet <emoji></emoji></h1>
+<hr/>
+
+<pre>
+  This message is from the main.html; 
+   holding all components displayed and loaded as a directive in home.view.html
+  
+  NOTE:
+  All updates (here in main.html) will refresh the content in this page
+  This will cause all components loaded in this page to lose state
+  - i.e. directives nested in a directive will lose its state unless state is kept in the controller
+
+  Also: 
+  It seems like the directive need to have a controller for the hot-reload to work.
+
+  ... ... ...
+  </pre>
+  <hr/>
+  
+
+<hello></hello>
+<counter></counter>
+<hr/>
+
+
+<div style="margin-top: 30px;">
+  <div>
+    <element-button label="Click me now, (nothing will happen) .. "></element-button>    
+  </div>
+
+  
+  <div>
+    <element-date label="Select date"></element-date>
+  </div>
+  <div>
+    <fade></fade>
+  </div>
+</div>

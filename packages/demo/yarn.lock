@@ -3171,12 +3171,27 @@ lodash.template@^3.0.0:
     lodash.restparam "^3.0.0"
     lodash.templatesettings "^3.0.0"
 
+lodash.template@^4.4.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/lodash.template/-/lodash.template-4.5.0.tgz#f976195cf3f347d0d5f52483569fe8031ccce8ab"
+  integrity sha512-84vYFxIkmidUiFxidA/KjjH9pAycqW+h980j7Fuz5qxRtO9pgB7MDFTdys1N7A5mcucRiDyEq4fusljItR1T/A==
+  dependencies:
+    lodash._reinterpolate "^3.0.0"
+    lodash.templatesettings "^4.0.0"
+
 lodash.templatesettings@^3.0.0:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/lodash.templatesettings/-/lodash.templatesettings-3.1.1.tgz#fb307844753b66b9f1afa54e262c745307dba8e5"
   dependencies:
     lodash._reinterpolate "^3.0.0"
     lodash.escape "^3.0.0"
+
+lodash.templatesettings@^4.0.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/lodash.templatesettings/-/lodash.templatesettings-4.2.0.tgz#e481310f049d3cf6d47e912ad09313b154f0fb33"
+  integrity sha512-stgLz+i3Aa9mZgnjr/O+v9ruKZsPsndy7qPZOchbqk2cnTU1ZaldKK+v7m54WoKIyxiuMZTKT2H81F8BeAc3ZQ==
+  dependencies:
+    lodash._reinterpolate "^3.0.0"
 
 lodash@^3.10.1:
   version "3.10.1"
@@ -3532,6 +3547,30 @@ neo-async@^2.5.0:
 next-tick@1:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
+
+ng-hot-reload-core@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/ng-hot-reload-core/-/ng-hot-reload-core-2.1.0.tgz#9e8410c94e5e2358dfa8687d92c30864c901fc8a"
+  integrity sha512-R2x2pWt9INJQibRN1lTXjTHs/dlKpVBsUrkbWctBqNIiAZJhy59ZQLfMqG/GaDf/nn4GczWoa2FqYs4KOCNyfA==
+
+ng-hot-reload-loader@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/ng-hot-reload-loader/-/ng-hot-reload-loader-2.1.0.tgz#cda44805b617ab1dbaddf1817a45d3a2cbf4a700"
+  integrity sha512-lvRhMEuqrxVplvmpSmwKZ+tB3ONBKJ0SOTxZX7WlnT8E8LZFDzOkVkVpZxJeB9tYkUAxI7aJj6mROnnhMejX1g==
+  dependencies:
+    loader-utils "^1.1.0"
+    lodash.template "^4.4.0"
+    ng-hot-reload-core "^2.1.0"
+
+ng-hot-reload-standalone@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/ng-hot-reload-standalone/-/ng-hot-reload-standalone-2.1.0.tgz#3548e507c55eb3aaef3f1c6f606ce0de56f42e88"
+  integrity sha512-mlODRNWTqua1EeRDqajol5C+uE8yj+YQZGCQO6FsDcwdE84BzWTK65Yb2cf7M2jmt8v3rxCM0DX0TsynO0W5Bg==
+  dependencies:
+    express "^4.16.4"
+    ng-hot-reload-core "^2.1.0"
+    through2 "~3.0.0"
+    ws "~6.1.2"
 
 nice-try@^1.0.4:
   version "1.0.5"
@@ -5161,6 +5200,13 @@ through2@^3.0.0:
     readable-stream "2 || 3"
     xtend "~4.0.1"
 
+through2@~3.0.0:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/through2/-/through2-3.0.1.tgz#39276e713c3302edf9e388dd9c812dd3b825bd5a"
+  integrity sha512-M96dvTalPT3YbYLaKaCuwu+j06D/8Jfib0o/PxbVt6Amhv3dUAtW6rTV1jPgJSBG83I/e04Y6xkVdVhSRhi0ww==
+  dependencies:
+    readable-stream "2 || 3"
+
 through@2, through@~2.3, through@~2.3.1, through@~2.3.6:
   version "2.3.8"
   resolved "https://registry.yarnpkg.com/through/-/through-2.3.8.tgz#0dd4c9ffaabc357960b1b724115d7e0e86a2e1f5"
@@ -5651,6 +5697,13 @@ ws@~3.3.1:
 ws@~6.1.0:
   version "6.1.2"
   resolved "https://registry.yarnpkg.com/ws/-/ws-6.1.2.tgz#3cc7462e98792f0ac679424148903ded3b9c3ad8"
+  dependencies:
+    async-limiter "~1.0.0"
+
+ws@~6.1.2:
+  version "6.1.4"
+  resolved "https://registry.yarnpkg.com/ws/-/ws-6.1.4.tgz#5b5c8800afab925e94ccb29d153c8d02c1776ef9"
+  integrity sha512-eqZfL+NE/YQc1/ZynhojeV8q+H050oR8AZ2uIev7RU10svA9ZnJUddHcOUZTJLinZ9yEfdA2kSATS2qZK5fhJA==
   dependencies:
     async-limiter "~1.0.0"
 
