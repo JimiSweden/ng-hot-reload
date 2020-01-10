@@ -1,3 +1,28 @@
+# This fork has just some changes to the make "all" html content hot reload
+note: this updates all the subcomponents (directives) and all state is lost.
+Experimenting with hot reload and angular directives.
+
+From my relatively short recap on angularjs (havent used it since 2014/2015) I believe/assume this to be true..
+> a template loaded in '$stateProvider' (from ui-router, https://ui-router.github.io/ng1/docs/latest/) will be cached by the $templateCache. 
+> this will cause the hot reolad to not see the template, 'home.view.html', as updated, although it is.
+```js
+import './home.controller.js';
+import homeTemplate from './home.view.html';
+
+angular.module('hot-reload-demo')
+  .config(['$stateProvider', config]);
+
+function config($stateProvider) {
+  $stateProvider
+    .state('home', {
+      url: '',
+      template: homeTemplate,
+      // controller: 'HomeController',
+      // controllerAs: 'vm',
+    });
+}
+```
+
 # 🔥 ng-hot-reload
 
 #### Developing legacy apps doesn't need to suck <sup><i>(so bad)</i></sup>!
